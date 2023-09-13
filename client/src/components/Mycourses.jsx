@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 
 const Mycourses = () => {
   const eduId = useSelector((state) => state.user.educator._id);
+
   const [courses, setCourses] = useState([]);
   useEffect(() => {
     const getCourses = async () => {
@@ -19,7 +20,7 @@ const Mycourses = () => {
   }, []);
 
   return (
-    <div className=" flex flex-wrap ">
+    <div className=" flex flex-wrap  sm:pt-16 border border-gray-400 sm:w-[55vw] sm:min-h-[100vh] sm:pl-16  ">
       {courses.map((item) => (
         <CourseCard item={item} key={item._id} />
       ))}

@@ -11,6 +11,7 @@ const Login = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [alert, setAlert] = useState("");
+  console.log(alert);
 
   const handleRegister = () => {
     navigate("/register");
@@ -43,10 +44,9 @@ const Login = () => {
               dispatch(loginSuccess(res.data));
               if (res.data._id) {
                 navigate("/mycourses");
-              } else {
-                setAlert("Something went wrong!");
               }
             } catch (err) {
+              setAlert("Something went wrong!");
               console.log(err);
             }
           }}
@@ -79,7 +79,7 @@ const Login = () => {
                 <div className=" text-red-600 ml-4">{errors.password}</div>
               ) : null}
 
-              <p>{alert}</p>
+              <p className=" ml-4 text-red-600">{alert}</p>
 
               <button
                 className=" text-white font-semibold bg-cyan-900 rounded m-4 mb-0 h-12 mt-7 focus:bg-red-800"

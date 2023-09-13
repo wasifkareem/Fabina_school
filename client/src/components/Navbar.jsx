@@ -20,7 +20,7 @@ const Navbar = () => {
     navigate("/login");
   };
   return (
-    <div className=" flex justify-between items-center h-14 border border-black rounded-b-lg">
+    <div className=" fixed w-full z-10 bg-white  flex justify-between items-center h-14 border border-gray-500 rounded-b-lg">
       <div
         className=" cursor-pointer text-black font-bold text-3xl  pt-3 pl-2 sm:pl-3"
         onClick={handleClick}
@@ -31,14 +31,14 @@ const Navbar = () => {
       {isUser ? (
         <button
           onClick={handleLogout}
-          className=" border px-2 py-1 mr-2 sm:mr-5 border-black text-black font-semibold cursor-pointer rounded hover:bg-black hover:border-none hover:transition hover:text-white"
+          className=" border px-2 py-1 mr-2 sm:mr-5 border-gray-600 text-gray-600 font-semibold cursor-pointer rounded hover:bg-gray-600 hover:border-none hover:transition hover:text-white"
         >
           Logout
         </button>
       ) : (
         <button
           onClick={loginHandle}
-          className=" border px-2 py-1 mr-2 sm:mr-5 border-black text-black font-semibold cursor-pointer rounded hover:bg-black hover:border-none hover:transition hover:text-white"
+          className=" border px-2 py-1 mr-2 sm:mr-5 border-gray-600 text-gray-600 font-semibold cursor-pointer rounded hover:bg-gray-600 hover:border-none hover:transition hover:text-white"
         >
           Login
         </button>

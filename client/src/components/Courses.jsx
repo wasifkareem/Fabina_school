@@ -15,7 +15,7 @@ const Courses = () => {
   }, []);
 
   return (
-    <div className=" flex flex-wrap ">
+    <div className=" flex flex-wrap sm:py-20 sm:ml-12   ">
       {courses.map((item) => (
         <CourseCard item={item} key={item._id} />
       ))}
