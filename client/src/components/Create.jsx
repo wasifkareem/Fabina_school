@@ -1,8 +1,9 @@
 import { Formik, Field, Form, useField } from "formik";
 import * as Yup from "yup";
 import { useSelector } from "react-redux";
+import { useState } from "react";
 
-const Create = () => {
+const Create = ({ setRefresh }) => {
   const educatorId = useSelector((state) => state.user.educator._id);
   const firstName = useSelector((state) => state.user.educator.firstName);
   const lastName = useSelector((state) => state.user.educator.lastName);
@@ -42,6 +43,7 @@ const Create = () => {
             });
             const savedUser = await res.json();
             if (savedUser._id) {
+              setRefresh(savedUser.educatorId);
               resetForm();
             }
           }}
