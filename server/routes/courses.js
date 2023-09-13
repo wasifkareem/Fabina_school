@@ -27,7 +27,7 @@ router.get("/:id", async (req, res) => {
 //GET MY COURSES
 router.get("/user/:id", async (req, res) => {
   try {
-    const course = await Course.find({ educatorId: req.params.id });
+    const course = (await Course.find({ educatorId: req.params.id })).reverse();
     res.status(200).json(course);
   } catch (err) {
     console.log(err);
