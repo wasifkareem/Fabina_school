@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Courses from "../components/Courses";
+import { useLocation } from "react-router-dom";
 
 const Homepage = () => {
   return (

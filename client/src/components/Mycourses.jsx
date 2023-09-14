@@ -5,9 +5,9 @@ import { useSelector } from "react-redux";
 
 const Mycourses = (refresh) => {
   const eduId = useSelector((state) => state.user.educator._id);
+  const [reload, setReload] = useState(false);
 
   const [courses, setCourses] = useState([]);
-  console.log(courses);
   useEffect(() => {
     const getCourses = async () => {
       try {
@@ -18,7 +18,7 @@ const Mycourses = (refresh) => {
       } catch (err) {}
     };
     getCourses();
-  }, [refresh]);
+  }, [refresh, reload]);
 
   return (
     <div className=" flex flex-wrap  sm:pt-16 border border-gray-400 sm:w-[54vw] sm:min-h-[100vh] sm:pl-16  ">
@@ -27,7 +27,14 @@ const Mycourses = (refresh) => {
           Your courses will show here
         </p>
       ) : (
-        courses.map((item) => <CourseCard item={item} key={item._id} />)
+        courses.map((item) => (
+          <CourseCard
+            reload={reload}
+            setReload={setReload}
+            item={item}
+            key={item._id}
+          />
+        ))
       )}
     </div>
   );

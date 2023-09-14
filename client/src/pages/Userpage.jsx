@@ -3,10 +3,12 @@ import Navbar from "../components/Navbar";
 import Create from "../components/Create";
 import Mycourses from "../components/Mycourses";
 import { useSelector } from "react-redux";
+import { useLocation } from "react-router-dom";
 
 const Userpage = () => {
   const name = useSelector((state) => state.user.educator.firstName);
-  const [refresh, setRefresh] = useState("");
+  const [refresh, setRefresh] = useState(false);
+  console.log(refresh);
 
   return (
     <>
@@ -22,14 +24,20 @@ const Userpage = () => {
             className=" mb-2 sm:mr-20 
            mx-3 sm:ml-0"
           >
-            <p className=" sm:mt-3 w-fit flex text-3xl sm:text-4xl font-semibold text-gray-600  ">
-              Hey,<p className=" w-fit first-letter:uppercase">{name}</p>
-            </p>
+            <div className="flex">
+              <p className=" sm:mt-3 w-fit  text-3xl sm:text-4xl font-semibold text-gray-600  ">
+                Hey,
+              </p>
+              <h1 className=" sm:mt-3   text-3xl sm:text-4xl font-semibold text-gray-600 w-fit first-letter:uppercase">
+                {name}
+              </h1>
+            </div>
+
             <p className=" font-semibold mt-1 text-sm text-gray-600 ">
               Start your Educator journey with Fabina, add Your courses here.
             </p>
           </div>
-          <Create setRefresh={setRefresh} />
+          <Create setRefresh={setRefresh} refresh={refresh} />
         </section>
 
         <section className=" sm:ml-[45%]   ">

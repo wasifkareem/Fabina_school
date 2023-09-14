@@ -3,7 +3,7 @@ import * as Yup from "yup";
 import { useSelector } from "react-redux";
 import { useState } from "react";
 
-const Create = ({ setRefresh }) => {
+const Create = ({ refresh, setRefresh }) => {
   const educatorId = useSelector((state) => state.user.educator._id);
   const firstName = useSelector((state) => state.user.educator.firstName);
   const lastName = useSelector((state) => state.user.educator.lastName);
@@ -43,13 +43,15 @@ const Create = ({ setRefresh }) => {
             });
             const savedUser = await res.json();
             if (savedUser._id) {
-              setRefresh(savedUser.educatorId);
+              if (savedUser) {
+                setRefresh(refresh == false ? true : false);
+              }
               resetForm();
             }
           }}
         >
           {({ errors, touched }) => (
-            <Form className=" mb-4 rounded  border-gray-400 border  float-left mt-16 sm:mt-20 w-[93vw] pb-3  flex flex-col sm:mx-0  sm:w-[545px]  bg-gray-200">
+            <Form className=" mb-4 rounded  border-gray-400 border  float-left mt-16 sm:mt-20 w-[93vw] pb-3  flex flex-col sm:mx-0  sm:w-[545px] sm:max-h-[65vh]  bg-gray-200">
               <p className=" sm:text-lg font-semibold sm:mr-3 ml-4 mt-2 sm:ml-5  text-gray-100  bg-red-600 w-fit px-3 rounded  ">
                 Course Details.
               </p>
