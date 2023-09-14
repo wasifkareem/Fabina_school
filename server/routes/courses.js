@@ -24,6 +24,17 @@ router.get("/:id", async (req, res) => {
   }
 });
 
+//DELETE COURSE BY ID
+router.delete("/delete/:id", async (req, res) => {
+  try {
+    const course = await Course.findByIdAndDelete(req.params.id);
+    res.status(200).json(course);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 //GET MY COURSES
 router.get("/user/:id", async (req, res) => {
   try {
