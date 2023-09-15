@@ -31,7 +31,7 @@ const Register = () => {
           })}
           onSubmit={async (values) => {
             const savedUserResponse = await fetch(
-              "http://localhost:3000/auth/register",
+              "https://coursesbackend-wllh.onrender.com/auth/register",
               {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

@@ -35,12 +35,15 @@ const Create = ({ refresh, setRefresh }) => {
               firstName: firstName,
               lastName: lastName,
             };
-            const res = await fetch("http://localhost:3000/courses/addCourse", {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
+            const res = await fetch(
+              "https://coursesbackend-wllh.onrender.com/courses/addCourse",
+              {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
 
-              body: JSON.stringify(data),
-            });
+                body: JSON.stringify(data),
+              }
+            );
             const savedUser = await res.json();
             if (savedUser._id) {
               if (savedUser) {

@@ -36,7 +36,7 @@ const Login = () => {
                 "Content-Type": "application/json",
               };
               const res = await axios.post(
-                "http://localhost:3000/auth/login",
+                "https://coursesbackend-wllh.onrender.com/auth/login",
                 JSON.stringify(values),
                 { headers }
               );

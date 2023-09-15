@@ -12,7 +12,7 @@ const Mycourses = (refresh) => {
     const getCourses = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:3000/courses/user/${eduId}`
+          `https://coursesbackend-wllh.onrender.com/courses/user/${eduId}`
         );
         setCourses(res.data);
       } catch (err) {}

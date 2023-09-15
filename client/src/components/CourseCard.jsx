@@ -15,7 +15,7 @@ const CourseCard = ({ reload, setReload, item }) => {
   const handleDel = async () => {
     try {
       const res = await axios.delete(
-        `http://localhost:3000/courses/delete/${item._id}`
+        `https://coursesbackend-wllh.onrender.com/courses/delete/${item._id}`
       );
 
       if (res.data.educatorId) {
@@ -30,7 +30,7 @@ const CourseCard = ({ reload, setReload, item }) => {
       {ifHome.pathname == "/" ? null : (
         <MdDeleteForever
           onClick={handleDel}
-          className=" text-5xl mr-4 absolute bg-white hover:text-red-800 rounded-br-3xl p-2"
+          className=" text-5xl mr-4 absolute bg-white hover:bg-red-700 hover:text-white duration-500 rounded-br-3xl p-2"
         />
       )}
 

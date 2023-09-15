@@ -7,7 +7,9 @@ const Courses = () => {
   useEffect(() => {
     const getCourses = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/courses/");
+        const res = await axios.get(
+          "https://coursesbackend-wllh.onrender.com/courses/"
+        );
         setCourses(res.data);
       } catch (err) {}
     };
