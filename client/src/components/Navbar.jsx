@@ -68,7 +68,7 @@ const Navbar = () => {
               onClick={handleReg}
               className="ease-in duration-500 border px-2 py-1 mr-2 sm:mr-5 border-gray-600 text-gray-600 font-semibold cursor-pointer rounded hover:bg-gray-600 hover:border-none hover:transition hover:text-white"
             >
-              Register
+              Publish Courses
             </button>
 
             <button

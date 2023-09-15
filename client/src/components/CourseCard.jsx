@@ -6,7 +6,6 @@ import axios from "axios";
 const CourseCard = ({ reload, setReload, item }) => {
   const navigate = useNavigate();
   const ifHome = useLocation();
-  console.log(ifHome);
 
   const handleClick = () => {
     navigate(`/coursepage/${item._id}`);
@@ -46,7 +45,7 @@ const CourseCard = ({ reload, setReload, item }) => {
         </div>
 
         <p className=" mt-1 mx-3 text-gray-600">{item.desc.slice(0, 60)}...</p>
-        <div className="flex mt-10 mr-4 justify-between items-center sm:text-base  font-semibold text-xl ">
+        <div className="flex  mt-10 mr-4 justify-between items-center sm:text-base  font-semibold text-xl ">
           <p className=" ml-4 font-semibold w-fit bg-teal-900 px-3 rounded text-gray-200 py-1  ">
             {item.firstName} {item.lastName}
           </p>
