@@ -8,7 +8,6 @@ import { useLocation } from "react-router-dom";
 const Userpage = () => {
   const name = useSelector((state) => state.user.educator.firstName);
   const [refresh, setRefresh] = useState(false);
-  console.log(refresh);
 
   return (
     <>
