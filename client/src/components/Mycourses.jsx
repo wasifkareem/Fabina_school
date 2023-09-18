@@ -39,7 +39,7 @@ const Mycourses = (refresh) => {
           <div className="flex">
             <AiOutlineCloseCircle
               onClick={handleClose}
-              className=" text-4xl p-2"
+              className=" bg-black text-white text-4xl p-2 cursor-pointer"
             />
 
             <div className="flex gap-4 m-5 border border-gray-400 rounded-lg overflow-hidden w-[47%]">
