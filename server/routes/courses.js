@@ -35,6 +35,25 @@ router.delete("/delete/:id", async (req, res) => {
   }
 });
 
+//UPDATE COURSE BY ID
+router.put("/update/:id", async (req, res) => {
+  try {
+    const course = await Course.findByIdAndUpdate(req.params.id, {
+      title: req.body.title,
+      desc: req.body.desc,
+      img: req.body.img,
+      price: req.body.price,
+      educatorId: req.body.educatorId,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+    });
+    res.status(200).json(course);
+  } catch (err) {
+    console.log(err);
+    console.log("hello");
+  }
+});
+
 //GET MY COURSES
 router.get("/user/:id", async (req, res) => {
   try {
