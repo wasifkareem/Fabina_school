@@ -49,10 +49,10 @@ const Mycourses = (refresh) => {
                 alt=""
               />
               <div>
-                <h1 className=" text-3xl font-semibold">
+                <h1 className=" text-2xl font-semibold mt-1">
                   {modifiedInfo.title}
                 </h1>
-                <p className=" text-gray-70 ">
+                <p className=" text-gray-600 mt-1 ">
                   {modifiedInfo.desc.slice(0, 130)} .....
                 </p>
               </div>
