@@ -13,7 +13,7 @@ const Register = () => {
     navigate("/login");
   };
   return (
-    <div className=" h-[100vh] sm:h-[120vh] bg-gradient-to-bl from-purple-300 to-blue-400">
+    <div className=" h-[110vh] sm:h-[120vh] bg-gradient-to-bl from-purple-300 to-blue-400">
       <Navbar />
       <div className="  ">
         <Formik
@@ -48,7 +48,7 @@ const Register = () => {
         >
           {({ errors, touched }) => (
             <Form className=" sm:w-1/3 sm:ml-[450px] sm:py-8   float-left mt-20 sm:mt-20 w-[94%] ml-3 flex flex-col  bg-white">
-              <p className=" sm:text-lg font-semibold sm:mr-3 text-center ml-4 mt-2 sm:ml-5 animate-pulse text-black  mb-3  ">
+              <p className=" sm:text-lg font-semibold sm:mr-3 text-center ml-1 mt-2 sm:ml-5 animate-pulse text-black  mb-3  ">
                 Publish your own Courses on Fabina School. Register Now!
               </p>
               <Field

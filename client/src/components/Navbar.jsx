@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <div className=" fixed w-full z-10 bg-white  flex justify-between items-center h-14 border border-gray-500 rounded-b-lg">
       <div
-        className=" cursor-pointer text-black font-bold sm:text-3xl text-2xl  pl-2 sm:pl-3"
+        className=" cursor-pointer italic text-black font-bold sm:text-3xl text-lg  pl-2 sm:pl-3"
         onClick={handleClick}
       >
         Fabina School
@@ -51,13 +51,13 @@ const Navbar = () => {
           <>
             <button
               onClick={courseHandle}
-              className="ease-in duration-500 border px-2 py-1 mr-2 sm:mr-5 border-gray-600 text-gray-600 font-semibold cursor-pointer rounded hover:bg-gray-600 hover:border-none hover:transition hover:text-white"
+              className="ease-in duration-500 border px-2 py-1 mr-2 sm:mr-5 border-gray-600 text-gray-600 font-semibold cursor-pointer rounded text-xs sm:text-base hover:bg-gray-600 hover:border-none hover:transition hover:text-white"
             >
               My courses
             </button>
             <button
               onClick={handleLogout}
-              className="ease-in duration-500 border px-2 py-1 mr-2 sm:mr-5 border-gray-600 text-gray-600 font-semibold cursor-pointer rounded hover:bg-gray-600 hover:border-none hover:transition hover:text-white"
+              className="ease-in duration-500 border px-2 sm:text-base py-1 mr-2 sm:mr-5 border-gray-600 text-gray-600 font-semibold cursor-pointer rounded text-xs hover:bg-gray-600 hover:border-none hover:transition hover:text-white"
             >
               Logout
             </button>
@@ -66,14 +66,14 @@ const Navbar = () => {
           <>
             <button
               onClick={handleReg}
-              className="ease-in duration-500 border px-2 py-1 mr-2 sm:mr-5 border-gray-600 text-gray-600 font-semibold cursor-pointer rounded hover:bg-gray-600 hover:border-none hover:transition hover:text-white"
+              className="ease-in duration-500 border px-2 py-1 sm:text-base mr-2 sm:mr-5 border-gray-600 text-gray-600 font-semibold cursor-pointer rounded text-xs hover:bg-gray-600 hover:border-none hover:transition hover:text-white"
             >
               Publish Courses
             </button>
 
             <button
               onClick={loginHandle}
-              className="ease-in duration-500 border px-2 py-1 mr-2 sm:mr-5 border-gray-600 text-gray-600 font-semibold cursor-pointer rounded hover:bg-gray-600 hover:border-none hover:transition hover:text-white"
+              className=" hidden lg:block ease-in duration-500 border px-2 py-1 mr-2 sm:mr-5 border-gray-600 text-gray-600 font-semibold cursor-pointer rounded hover:bg-gray-600 hover:border-none hover:transition hover:text-white"
             >
               Login
             </button>

@@ -26,7 +26,6 @@ const Mycourses = (refresh) => {
     };
     getCourses();
   }, [refresh, reload, rel]);
-  console.log(courses);
 
   const handleClose = () => {
     setUpdatecard(false);
