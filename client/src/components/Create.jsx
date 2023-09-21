@@ -36,7 +36,7 @@ const Create = ({ refresh, setRefresh }) => {
               lastName: lastName,
             };
             const res = await fetch(
-              "https://coursesbackend-wllh.onrender.com/courses/addCourse",
+              "https://fabinaschool.onrender.com/courses/addCourse",
               {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

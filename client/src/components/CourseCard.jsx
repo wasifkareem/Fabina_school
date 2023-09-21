@@ -20,7 +20,7 @@ const CourseCard = ({
   const handleDel = async () => {
     try {
       const res = await axios.delete(
-        `https://coursesbackend-wllh.onrender.com/courses/delete/${item._id}`
+        `https://fabinaschool.onrender.com/courses/delete/${item._id}`
       );
 
       if (res.data.educatorId) {

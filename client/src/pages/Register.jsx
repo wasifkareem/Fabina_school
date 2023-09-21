@@ -31,7 +31,7 @@ const Register = () => {
           })}
           onSubmit={async (values) => {
             const savedUserResponse = await fetch(
-              "https://coursesbackend-wllh.onrender.com/auth/register",
+              "https://fabinaschool.onrender.com/auth/register",
               {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

@@ -36,7 +36,7 @@ const Login = () => {
                 "Content-Type": "application/json",
               };
               const res = await axios.post(
-                "https://coursesbackend-wllh.onrender.com/auth/login",
+                "https://fabinaschool.onrender.com/auth/login",
                 JSON.stringify(values),
                 { headers }
               );

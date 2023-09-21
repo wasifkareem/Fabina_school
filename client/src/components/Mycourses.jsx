@@ -19,7 +19,7 @@ const Mycourses = (refresh) => {
     const getCourses = async () => {
       try {
         const res = await axios.get(
-          `https://coursesbackend-wllh.onrender.com/courses/user/${eduId}`
+          `https://fabinaschool.onrender.com/courses/user/${eduId}`
         );
         setCourses(res.data);
       } catch (err) {}
