@@ -36,7 +36,7 @@ const CourseCard = ({
     setCourseInfo(item);
   };
   return (
-    <div className="  cursor-pointer scale-[0.99] hover:scale-[1.01] ease-in duration-500 hover:border-gray-500 hover:transition hover:border  bg-neutral-100 shadow-xl border-gray-300 border mt-3  rounded-md overflow-hidden h-[60vh] w-[94%] ml-2 sm:w-[300px]">
+    <div className="  cursor-pointer scale-[0.99] hover:scale-[1.01] ease-in duration-500 hover:border-gray-500 hover:transition hover:border  bg-neutral-100 shadow-xl border-gray-300 border mt-3  rounded-md overflow-hidden h-fit pb-4 w-[94%] ml-2 sm:w-[300px]">
       {ifHome.pathname == "/" ? null : (
         <MdDeleteForever
           onClick={handleDel}

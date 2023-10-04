@@ -26,7 +26,7 @@ const Coursepage = () => {
     <div>
       <Navbar />
       <div className="sm:flex pb-5">
-        <div className=" mt-4 mx-3 shadow sm:mt-16 sm:ml-10">
+        <div className=" pt-20 sm:pt-3 mx-3 shadow sm:mt-16 sm:ml-10">
           <img
             className=" w-full sm:min-w-[600px] sm:h-[400px]"
             src={courseInfo.img}
